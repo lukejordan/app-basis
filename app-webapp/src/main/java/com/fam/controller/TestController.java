@@ -146,7 +146,7 @@ public class TestController {
 	      Person person2 = new Person ();
 	      
 	      person2.setAge(21);
-	      person2.setFirstName("First6");
+	      person2.setFirstName(person.getFirstName());
 	      person2.setLastName("gyuguyguygy");
 
 	      Job job = new Job();
@@ -155,7 +155,7 @@ public class TestController {
 	      
 	      person2.setJob(job);
 
-	      ResponseEntity response = new ResponseEntity<Person>(person, HttpStatus.OK);
+	      ResponseEntity response = new ResponseEntity<Person>(person2, HttpStatus.OK);
 	      
 	      return response;
 	   }
